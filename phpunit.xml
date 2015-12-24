@@ -20,4 +20,25 @@
         <env name="SESSION_DRIVER" value="array"/>
         <env name="QUEUE_DRIVER" value="sync"/>
     </php>
+    <filter>
+        <whitelist>
+            <directory>./app</directory>
+            <exclude>
+                <directory>./app/Providers</directory>
+                <file>./app/Console/Kernel.php</file>
+                <file>./app/Events/Event.php</file>
+                <file>./app/Http/Controllers/Controller.php</file>
+                <file>./app/Http/Middleware/Authenticate.php</file>
+                <file>./app/Http/Middleware/EncrypyCookies.php</file>
+                <file>./app/Http/Middleware/RedirectIfAuthenticated.php</file>
+                <file>./app/Http/Middleware/VerifyCsrfToken.php</file>
+                <file>./app/Http/Requests/Request.php</file>
+                <file>./app/Http/Kernel.php</file>
+            </exclude>
+        </whitelist>
+    </filter>
+    <logging>
+        <log type="coverage-text" target="php://stdout" showUncoveredFiles="false"/>
+        <log type="coverage-clover" target="storage/logs/clover.xml"/>
+    </logging>
 </phpunit>
