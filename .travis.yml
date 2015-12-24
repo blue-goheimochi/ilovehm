@@ -11,7 +11,7 @@ before_script:
   - composer self-update
   - composer install
   - chmod -R 777 storage
-  - copy .env.example .env
+  - cp .env.example .env
   - php artisan key:generate
 
 script:
