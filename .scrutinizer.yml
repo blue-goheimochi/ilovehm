@@ -1,18 +1,17 @@
 filter:
-  paths:
-    - 'app/*'
-  excluded_paths:
-    - 'app/views/*'
-    - 'app/config/*'
-    - 'app/database/*'
-
+    paths:
+        - app/
+    excluded_paths:
+        - tests/*
+tools:
+    external_code_coverage:
+        timeout: 600
+    php_code_sniffer:
+        config:
+            standard: "PSR2"
+    php_cs_fixer:
+        config: { level: psr2 }
 checks:
-  php: true
-
-coding_style:
-  php:
-    spaces:
-      around_operators:
-        concatenation: false
-      within:
-        brackets: true
+    php:
+        code_rating: true
+        duplication: true
