@@ -11,6 +11,20 @@
 |
 */
 
+use App\Instagram;
+
 Route::get('/', function () {
-    return view('welcome');
+
+    $instagram = new Instagram();
+    $json = $instagram->callTagsMediaRecentAPI('浜松まつり');
+    $data = json_decode($json);
+
+    return view('index', ['items' => $data->data, 'max_tag_id' => $data->pagination->next_max_id]);
+
+});
+
+Route::controller('instagram', 'InstagramController');
+
+Route::get('about', function () {
+    return view('about');
 });
