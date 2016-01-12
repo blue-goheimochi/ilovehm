@@ -1,6 +1,11 @@
 @extends('layouts.master')
 
+@section('meta-description', 'I Love 浜松まつりはInstagramにハッシュタグ「#浜松まつり」付きで投稿された写真をまとめたサイトです。' )
+@section('meta-keyword', '浜松まつり,浜松祭,凧揚げ,屋台引き回し,激練り,初子,ラッパ隊' )
 @section('title', 'I Love 浜松まつり')
+@section('og-title', 'I Love 浜松まつり' )
+@section('og-description', 'I Love 浜松まつりはInstagramにハッシュタグ「#浜松まつり」付きで投稿された写真をまとめたサイトです。' )
+@section('og-url', 'http://ilovehm.net' )
 
 @section('content')
     <div class="row">
