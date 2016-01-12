@@ -6,9 +6,13 @@
     <meta name="robots" content="index">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="keywords" content="" />
+    <meta name="description" content="@yield('meta-description')">
+    <meta name="keywords" content="@yield('meta-keyword')" />
     <title>@yield('title')</title>
+    <meta property="og:title" content="@yield('og-title')" />
+    <meta property="og:description" content="@yield('og-description')" />
+    <meta property="og:url" content="@yield('og-url')" />
+    <meta property="og:image" content="@yield('og:image')" />
     <link rel="shortcut icon" href="/icon/favicon.png" type="image/x-icon">
     <link rel="apple-touch-icon-precomposed" href="/icon/favicon.png">
     <link rel="stylesheet" type="text/css" href="/css/vendor.css">
