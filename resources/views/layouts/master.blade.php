@@ -13,7 +13,7 @@
     <meta property="og:description" content="@yield('og-description')" />
     <meta property="og:url" content="@yield('og-url')" />
     <meta property="og:image" content="@yield('og:image')" />
-    <link rel="shortcut icon" href="/icon/favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
     <link rel="apple-touch-icon-precomposed" href="/icon/favicon.png">
     <link rel="stylesheet" type="text/css" href="/css/vendor.css">
     <link rel="stylesheet" type="text/css" href="/css/app.css">
